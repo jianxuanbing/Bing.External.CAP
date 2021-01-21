@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
+using Dapper;
 using DotNetCore.CAP.Internal;
 using DotNetCore.CAP.Messages;
 using DotNetCore.CAP.Monitoring;
@@ -139,9 +140,9 @@ namespace DotNetCore.CAP.MySql
         public async Task<int> DeleteExpiresAsync(string table, DateTime timeout, int batchCount = 1000, CancellationToken token = default)
         {
             await using var connection = new MySqlConnection(_options.Value.ConnectionString);
-            return connection.ExecuteNonQuery(
-                $@"DELETE FROM `{table}` WHERE ExpiresAt < @timeout limit @batchCount;", null,
-                new MySqlParameter("@timeout", timeout), new MySqlParameter("@batchCount", batchCount));
+            return await connection.ExecuteAsync(
+                $@"DELETE FROM `{table}` WHERE ExpiresAt < @timeout limit @batchCount;",
+                new { timeout, batchCount });
         }
 
         public async Task<IEnumerable<MediumMessage>> GetPublishedMessagesOfNeedRetry() =>

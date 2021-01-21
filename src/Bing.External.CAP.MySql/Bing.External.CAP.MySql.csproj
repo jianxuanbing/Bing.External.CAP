@@ -3,13 +3,13 @@
     <VersionMajor>3</VersionMajor>
     <VersionMinor>1</VersionMinor>
     <VersionPatch>2</VersionPatch>
-    <VersionQuality>20210121-1</VersionQuality>
+    <VersionQuality>20210121-3</VersionQuality>
     <VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
     <VersionSuffix>preview-$(VersionQuality)</VersionSuffix>
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Bing.External.CAP.MySql</AssemblyName>
     <PackageTags>CAP;MySQL</PackageTags>
   </PropertyGroup>
@@ -30,10 +30,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
     <PackageReference Include="DotNetCore.CAP" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.11" />
-    <PackageReference Include="MySqlConnector" Version="0.69.9" />
+    <PackageReference Include="MySqlConnector" Version="0.60.3" />
   </ItemGroup>
 
   <ItemGroup>
