@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.External.CAP.MySql", "src\Bing.External.CAP.MySql\Bing.External.CAP.MySql.csproj", "{A021973B-871E-48B5-8D37-9A5AFDC035AD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.RabbitMQ.MySql", "samples\Sample.RabbitMQ.MySql\Sample.RabbitMQ.MySql.csproj", "{D8BFC596-A36B-4E16-AC5B-C61A44AAEADF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A021973B-871E-48B5-8D37-9A5AFDC035AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A021973B-871E-48B5-8D37-9A5AFDC035AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A021973B-871E-48B5-8D37-9A5AFDC035AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BFC596-A36B-4E16-AC5B-C61A44AAEADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BFC596-A36B-4E16-AC5B-C61A44AAEADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BFC596-A36B-4E16-AC5B-C61A44AAEADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BFC596-A36B-4E16-AC5B-C61A44AAEADF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
