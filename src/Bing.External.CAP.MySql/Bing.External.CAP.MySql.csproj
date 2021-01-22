@@ -3,7 +3,7 @@
     <VersionMajor>3</VersionMajor>
     <VersionMinor>1</VersionMinor>
     <VersionPatch>2</VersionPatch>
-    <VersionQuality>20210121-3</VersionQuality>
+    <VersionQuality>20210122-1</VersionQuality>
     <VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
     <VersionSuffix>preview-$(VersionQuality)</VersionSuffix>
   </PropertyGroup>
@@ -30,10 +30,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.30" />
     <PackageReference Include="DotNetCore.CAP" Version="3.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.11" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.10" />
     <PackageReference Include="MySqlConnector" Version="0.60.3" />
   </ItemGroup>
 

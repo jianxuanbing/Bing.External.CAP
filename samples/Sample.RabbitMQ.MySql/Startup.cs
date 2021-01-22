@@ -1,4 +1,7 @@
-﻿using DotNetCore.CAP.Messages;
+﻿using AspectCore.DynamicProxy;
+using AspectCore.Extensions.AspectScope;
+using AspectCore.Extensions.DependencyInjection;
+using DotNetCore.CAP.Messages;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -31,6 +34,10 @@ namespace Sample.RabbitMQ.MySql
             });
 
             services.AddControllers();
+            services.ConfigureDynamicProxy();
+            services.AddScoped<IAspectScheduler, ScopeAspectScheduler>();
+            services.AddScoped<IAspectBuilderFactory, ScopeAspectBuilderFactory>();
+            services.AddScoped<IAspectContextFactory, ScopeAspectContextFactory>();
         }
 
         public void Configure(IApplicationBuilder app)
